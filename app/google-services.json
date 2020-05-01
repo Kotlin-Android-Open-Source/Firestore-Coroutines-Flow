@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "995926619937",
+    "firebase_url": "https://fir-demo-flutter.firebaseio.com",
+    "project_id": "firebase-demo-flutter",
+    "storage_bucket": "firebase-demo-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995926619937:android:d630a90aa0f3c320",
+        "android_client_info": {
+          "package_name": "com.hoc.demoredux"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKVqjxVprZazEHqVyppOx84mb5fz-NxqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995926619937-oeb7p3672005cr5n4f2874lf1mlkhugs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hoc.wallpaper"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995926619937:android:0358c8a2942ca397",
+        "android_client_info": {
+          "package_name": "com.hoc.loginpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKVqjxVprZazEHqVyppOx84mb5fz-NxqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995926619937-oeb7p3672005cr5n4f2874lf1mlkhugs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hoc.wallpaper"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995926619937:android:1c40e2106c0a1997",
+        "android_client_info": {
+          "package_name": "com.hoc.wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKVqjxVprZazEHqVyppOx84mb5fz-NxqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995926619937-oeb7p3672005cr5n4f2874lf1mlkhugs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hoc.wallpaper"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995926619937:android:be8f46f5422f3fd8f9b060",
+        "android_client_info": {
+          "package_name": "com.hoc081098.firestore_coroutinesflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKVqjxVprZazEHqVyppOx84mb5fz-NxqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995926619937-lg95gvlhphq0583honi5k0n1e6bohruj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995926619937-oeb7p3672005cr5n4f2874lf1mlkhugs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hoc.wallpaper"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
