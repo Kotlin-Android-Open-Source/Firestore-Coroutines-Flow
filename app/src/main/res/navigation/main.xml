@@ -9,5 +9,21 @@
         android:id="@+id/mainFragment"
         android:name="com.hoc081098.firestore_coroutinesflow.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.hoc081098.firestore_coroutinesflow.ui.category_detail.CategoryDetailFragment"
+        android:label="CategoryDetailFragment">
+
+        <argument
+            android:name="category"
+            app:argType="com.hoc081098.firestore_coroutinesflow.domain.entity.Category"
+            app:nullable="false" />
+
+    </fragment>
 </navigation>

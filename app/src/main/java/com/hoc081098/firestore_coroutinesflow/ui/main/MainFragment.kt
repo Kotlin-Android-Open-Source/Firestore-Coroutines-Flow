@@ -1,11 +1,11 @@
 package com.hoc081098.firestore_coroutinesflow.ui.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.hoc081098.firestore_coroutinesflow.GlideApp
 import com.hoc081098.firestore_coroutinesflow.Lce
@@ -23,7 +23,11 @@ class MainFragment : Fragment(R.layout.main_fragment) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    val categoryAdapter = CategoryAdapter(GlideApp.with(this))
+    val categoryAdapter = CategoryAdapter(GlideApp.with(this)) { category ->
+      MainFragmentDirections
+        .actionMainFragmentToCategoryDetailFragment(category)
+        .let { findNavController().navigate(it) }
+    }
 
     binding.recyclerView.run {
       setHasFixedSize(true)
