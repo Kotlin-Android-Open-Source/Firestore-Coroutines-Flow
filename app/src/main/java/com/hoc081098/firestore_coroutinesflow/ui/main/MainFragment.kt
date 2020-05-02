@@ -1,6 +1,7 @@
 package com.hoc081098.firestore_coroutinesflow.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
