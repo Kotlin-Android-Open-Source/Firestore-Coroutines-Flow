@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.hoc081098.firestore_coroutinesflow.GlideRequests
+import com.hoc081098.firestore_coroutinesflow.R
 import com.hoc081098.firestore_coroutinesflow.databinding.CategoryItemBinding
 import com.hoc081098.firestore_coroutinesflow.domain.entity.Category
 
@@ -40,6 +41,8 @@ class CategoryAdapter(
         .load(item.imageUrl)
         .diskCacheStrategy(DiskCacheStrategy.ALL)
         .centerCrop()
+        .placeholder(R.drawable.icons8_full_image_80)
+        .error(R.drawable.icons8_full_image_80)
         .into(binding.imageView)
       binding.textView.text = item.name
     }
