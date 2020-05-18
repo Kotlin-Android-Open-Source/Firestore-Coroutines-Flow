@@ -8,11 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.hoc081098.firestore_coroutinesflow.GlideApp
-import com.hoc081098.firestore_coroutinesflow.Lce
-import com.hoc081098.firestore_coroutinesflow.R
+import com.hoc081098.firestore_coroutinesflow.*
 import com.hoc081098.firestore_coroutinesflow.databinding.MainFragmentBinding
-import com.hoc081098.firestore_coroutinesflow.viewBinding
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -32,10 +29,14 @@ class MainFragment : Fragment(R.layout.main_fragment) {
 
     binding.recyclerView.run {
       setHasFixedSize(true)
-      layoutManager = GridLayoutManager(context, 2)
+      layoutManager = GridLayoutManager(context, if (context.isOrientationPortrait) 2 else 3)
       adapter = categoryAdapter
     }
 
+    bindVM(categoryAdapter)
+  }
+
+  private fun bindVM(categoryAdapter: CategoryAdapter) {
     vm.categoriesData.observe(owner = viewLifecycleOwner) { state ->
       when (state) {
         Lce.Loading -> {
