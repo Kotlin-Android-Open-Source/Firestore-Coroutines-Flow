@@ -5,6 +5,7 @@ import android.view.View
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.hoc081098.firestore_coroutinesflow.GlideApp
@@ -35,7 +36,7 @@ class MainFragment : Fragment(R.layout.main_fragment) {
       adapter = categoryAdapter
     }
 
-    vm.categoriesData.observe(viewLifecycleOwner) { state ->
+    vm.categoriesData.observe(owner = viewLifecycleOwner) { state ->
       when (state) {
         Lce.Loading -> {
           binding.progressBar.isVisible = true

@@ -21,4 +21,14 @@ data class ImageEntity(
   @get:PropertyName("categoryId")
   @set:PropertyName("categoryId")
   var categoryId: String,
-)
+) {
+  @Suppress("unused")
+  constructor() : this(
+    name = "",
+    imageUrl = "",
+    thumbnailUrl = "",
+    viewCount = 0,
+    downloadCount = 0,
+    categoryId = ""
+  )
+}
