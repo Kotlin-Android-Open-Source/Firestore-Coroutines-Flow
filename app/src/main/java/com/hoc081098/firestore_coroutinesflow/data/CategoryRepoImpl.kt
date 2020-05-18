@@ -25,9 +25,10 @@ class CategoryRepoImpl(
   override fun watchCategories(): Flow<List<Category>> {
     return firestore
       .collection("categories")
+      .orderBy("name")
       .snapshots()
       .map { (querySnapshot, exception) ->
-        if (exception !== null) throw exception
+        exception?.let { throw it }
         (querySnapshot ?: return@map emptyList())
           .documents
           .mapNotNull { it.toObject(CategoryEntity::class.java)?.toCategory(it.id) }
@@ -52,7 +53,7 @@ fun Query.snapshots(): Flow<Pair<QuerySnapshot?, FirebaseFirestoreException?>> {
     }
     awaitClose {
       listener.remove()
-      Log.d("###", "Remove listener $listener")
+      Log.d("Query.snapshots", "Remove listener $listener for query ${this@snapshots}")
     }
   }
 }
