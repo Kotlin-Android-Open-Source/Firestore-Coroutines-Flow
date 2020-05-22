@@ -18,11 +18,16 @@
     <fragment
         android:id="@+id/categoryDetailFragment"
         android:name="com.hoc081098.firestore_coroutinesflow.ui.category_detail.CategoryDetailFragment"
-        android:label="CategoryDetailFragment">
+        android:label="{title}">
 
         <argument
             android:name="category"
             app:argType="com.hoc081098.firestore_coroutinesflow.domain.entity.Category"
+            app:nullable="false" />
+
+        <argument
+            android:name="title"
+            app:argType="string"
             app:nullable="false" />
 
     </fragment>

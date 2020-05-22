@@ -18,7 +18,8 @@ class CategoryDetailViewModel(
   private val category: Category,
   private val imageRepo: ImageRepo,
 ) : ViewModel(), Observer<Lce<List<Image>>> {
-  val categoriesData by lazy(NONE) {
+
+  private val lazyData = lazy(NONE) {
     imageRepo.imagesByCategory(category)
       .map { Lce.content(it) }
       .onStart { emit(Lce.loading()) }
@@ -27,10 +28,14 @@ class CategoryDetailViewModel(
       .apply { observeForever(this@CategoryDetailViewModel) }
   }
 
+  val imagesData by lazyData
+
   override fun onChanged(t: Lce<List<Image>>?) = Unit
 
   override fun onCleared() {
     super.onCleared()
-    categoriesData.removeObserver(this)
+    if (lazyData.isInitialized()) {
+      imagesData.removeObserver(this)
+    }
   }
 }

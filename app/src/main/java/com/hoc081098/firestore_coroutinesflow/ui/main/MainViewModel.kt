@@ -14,7 +14,8 @@ import kotlin.LazyThreadSafetyMode.NONE
 
 @ExperimentalCoroutinesApi
 class MainViewModel(categoryRepo: CategoryRepo) : ViewModel(), Observer<Lce<List<Category>>> {
-  val categoriesData by lazy(NONE) {
+
+  private val lazyData = lazy(NONE) {
     categoryRepo.watchCategories()
       .map { Lce.content(it) }
       .onStart { emit(Lce.loading()) }
@@ -23,10 +24,14 @@ class MainViewModel(categoryRepo: CategoryRepo) : ViewModel(), Observer<Lce<List
       .apply { observeForever(this@MainViewModel) }
   }
 
+  val categoriesData by lazyData
+
   override fun onChanged(t: Lce<List<Category>>?) = Unit
 
   override fun onCleared() {
     super.onCleared()
-    categoriesData.removeObserver(this)
+    if (lazyData.isInitialized()) {
+      categoriesData.removeObserver(this)
+    }
   }
 }

@@ -23,7 +23,7 @@ class MainFragment : Fragment(R.layout.main_fragment) {
 
     val categoryAdapter = CategoryAdapter(GlideApp.with(this)) { category ->
       MainFragmentDirections
-        .actionMainFragmentToCategoryDetailFragment(category)
+        .actionMainFragmentToCategoryDetailFragment(category, category.name)
         .let { findNavController().navigate(it) }
     }
 
